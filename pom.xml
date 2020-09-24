@@ -15,8 +15,16 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Cat-Example</name>
+    <name>cat-example</name>
     <description>Cat-Example project, Base on Cat-Framework v3</description>
+    <url>http://cat.lakex.cn</url>
+
+    <developers>
+        <developer>
+            <name>LarryKoo</name>
+            <email>gumutianqi@gmail.com</email>
+        </developer>
+    </developers>
 
     <properties>
         <java.version>1.8</java.version>
