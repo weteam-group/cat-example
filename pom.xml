@@ -32,6 +32,10 @@
 
     </properties>
 
+    <modules>
+        <module>cat-example-01</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <!-- 导入 LakeX Bom 组件依赖 -->
