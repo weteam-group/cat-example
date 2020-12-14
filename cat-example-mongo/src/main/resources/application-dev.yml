@@ -1,0 +1,6 @@
+### Env for dev
+spring:
+  data:
+    mongodb:
+      uri: mongodb://demo:demo@localhost:27017/exam_ai?socketTimeoutMS=60000&maxPoolSize=1000
+      database: exam_ai

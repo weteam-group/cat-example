@@ -1,0 +1,65 @@
+## Global configuration
+info:
+  build:
+    name: @project.name@
+    artifact: @project.artifactId@
+    description: @project.description@
+    version: @project.version@
+    java-version: @java.version@
+    encoding: @project.build.sourceEncoding@
+    environment: ${spring.profiles.active}
+    server-port: ${server.port}
+
+## Logging
+logging:
+  level:
+    cn.sxw: debug
+#debug: true
+
+## Server configuration
+server:
+  port: 8080
+  compression:
+    enabled: true
+  undertow:
+    buffer-size: 512
+    direct-buffers: true
+    threads:
+      io: 2
+      worker: 16
+
+## Mica Configuration
+mica:
+  log:
+    console:
+      enabled: true
+    request:
+      enabled: true
+
+## Spring configuration
+spring:
+  profiles:
+    active: dev
+  application:
+    name: ${info.build.name}
+
+### Spring Boot Management Enabled
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    export:
+      prometheus:
+        enabled: true
+        descriptions: true
+        step: 1m
+
+### Swagger doc configuration
+swagger:
+  enabled: true
+  application-name: ${info.build.name}
+

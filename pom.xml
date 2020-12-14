@@ -34,11 +34,12 @@
 
     <modules>
         <module>cat-example-01</module>
+        <module>cat-example-mongo</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
-            <!-- 导入 LakeX Bom 组件依赖 -->
+            <!-- 导入 Cat Bom 组件依赖 -->
             <dependency>
                 <groupId>cn.lakex</groupId>
                 <artifactId>cat-bom</artifactId>
